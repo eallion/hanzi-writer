@@ -1,67 +1,50 @@
 ---
 layout: default
-js: index.js
-title: Chinese Character Stroke Order Animations and Practice Quizzes
+js: demo.js
 ---
-<div class="intro">
-  <div class="container">
-    <div class="intro-inner">
-      <div id="ni" class="char"></div>
-      <div id="hao" class="char"></div>
-      <h1>Stroke Order Animation and Practice Quizzes</h1>
-      <p>
-        Hanzi Writer is a free and open-source javascript library
-        for Chinese character stroke order animations and stroke order practice quizzes.
-        Works with both simplified and traditional characters.
-      </p>
-      <div class="intro-actions">
-        <a class="intro-btn btn btn-lg btn-primary" href="docs.html">
-          Get started
-        </a>
-        <a class="intro-btn btn btn-lg btn-default" href="demo.html">
-          View demos
-        </a>
+<div class="demo container">
+  <h1>Hanzi Writer 案例</h1>
+  <form class="form-inline char-select-form js-char-form">
+    <div class="form-group">
+      <label for="character-select">
+        汉字
+      </label>
+      <input type="text" class="form-control character-select" id="character-select" size="1" maxlength="1" value="语" />
+    </div>
+    <button type="submit" class="btn btn-default">更新案例</button>
+  </form>
+
+  <hr class="demo-divider" />
+
+  <h4>汉字动画</h4>
+  <div class="demo-target" id="animation-target"></div>
+  <div class="demo-controls">
+    <form class="form-inline">
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" checked="checked" id="animation-show-outline" /> 展示轮廓
+        </label>
+        <button class="btn btn-primary" id="animate">动画!</button>
       </div>
-    </div>
+    </form>
   </div>
+  <a href="docs.html#animation-link" class="demo-docs-link">了解更多关于动画知识</a>
+
+  <hr class="demo-divider" />
+
+  <h4>描写测试</h4>
+  <p>通过用鼠标或手指绘制汉字 <strong class="char-symbol"></strong> 来测验自己的书写正确错误</p>
+
+  <div class="demo-target" id="quiz-target"></div>
+  <div class="demo-controls">
+    <form class="form-inline">
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" checked="checked" id="quiz-show-outline" /> 展示轮廓
+        </label>
+        <button class="btn btn-primary" id="quiz-reset">重置</button>
+      </div>
+    </form>
+  </div>
+  <a href="docs.html#quizzing-link" class="demo-docs-link">学习更多测试</a>
 </div>
-
-
-<!-- Marketing messaging and featurettes
-================================================== -->
-<!-- Wrap the rest of the page in another container to center all the content. -->
-
-<div class="container marketing">
-  <hr class="featurette-divider marketing-top-divider" />
-  <div class="sub-features">
-    <div class="sub-feature">
-      <h4>9000+ characters</h4>
-      <p>
-        Hanzi Writer uses character data from the <a target="_blank"
-          href="https://github.com/skishore/makemeahanzi">Make Me a Hanzi</a> project, providing over 9000 of the most
-        common
-        simplified and traditional characters.
-      </p>
-    </div>
-    <div class="sub-feature middle-subfeature">
-      <h4>Tiny library size</h4>
-      <p>
-        The Hanzi Writer library is only 35 kb (just 10kb gzipped!), so it won't add bloat to web pages and apps.
-      </p>
-    </div>
-    <div class="sub-feature">
-      <h4>Works everywhere</h4>
-      <p>
-        Hanzi Writer uses javascript, HTML5 and SVG, so it can be embedded into almost any application,
-        whether an iOS or Android app, or a webpage.
-      </p>
-    </div>
-  </div>
-  <hr class="featurette-divider marketing-bottom-divider" />
-
-  <h2>Data Source</h2>
-
-  HanziWriter's stroke order animation data was extracted from the excellent <a target="_blank"
-    href="https://github.com/skishore/makemeahanzi">Make Me a Hanzi</a> project.
-
-</div><!-- /.container -->
